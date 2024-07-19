@@ -1,5 +1,5 @@
 import { DomainError } from "./domain-error";
-import { PasswordService } from "./password.service";
+import { PasswordService } from "./password.service.server";
 import { Password } from "./password.value-object";
 import { ValueObject } from "./value-object";
 

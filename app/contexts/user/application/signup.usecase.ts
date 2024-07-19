@@ -25,7 +25,7 @@ export class SignupUseCase {
             const error = e as DomainError;
             return fail(error.message);
         }
-
+        debugger;
         const isExist = await this.userRepo.exists(email.value);
 
         if (isExist) {

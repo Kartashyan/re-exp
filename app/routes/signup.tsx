@@ -9,16 +9,18 @@ export const action: ActionFunction = async ({ request }) => {
     const email = body.get("email");
     const password = body.get("password");
     if (!email || !password) {
-        return new Response(JSON.stringify({errors: {
-            text: "Email and password are required",
-        
-        }}), {
+        return new Response(JSON.stringify({
+            errors: {
+                text: "Email and password are required",
+
+            }
+        }), {
             headers: {
-              "Content-Type": "application/json; utf-8",
+                "Content-Type": "application/json; utf-8",
             },
-          });
+        });
     }
-    
+
     await userService.signup({ email, password });
 
     return redirect("/login");
@@ -45,9 +47,10 @@ export default function Signup() {
                 </Form>
                 <p>Already have an account?</p>
                 <p>Go to</p>
-                <Button variant="link" asChild>
+                <Button asChild>
                     <Link to="/login">Login</Link>
                 </Button>
+
             </div>
         </section>
     );

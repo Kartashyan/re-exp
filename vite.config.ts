@@ -14,16 +14,5 @@ export default defineConfig({
       },
     }),
     tsconfigPaths(),
-    react(),
   ],
-  resolve: {
-    alias: [
-      { find: "app", replacement: path.resolve(__dirname, "./app/") },
-],
-  },
-  build: {
-    rollupOptions: {
-      external: ['mock-aws-s3', 'aws-sdk', 'nock']
-    }
-  }
 });

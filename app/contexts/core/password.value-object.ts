@@ -1,7 +1,7 @@
 
 import { ValueObject } from "~/contexts/core/value-object";
 import { DomainError } from "~/contexts/core/domain-error";
-import { PasswordService } from "./password.service";
+import { PasswordService } from "./password.service.server";
 import { HashedPassword } from "./hashed-password.value-object";
 
 type PasswordValueObjectProps = {
