@@ -2,9 +2,13 @@ import { Form, Link, useActionData } from "@remix-run/react";
 import { ActionFunction } from "@remix-run/node";
 import { Input } from "~/components/input";
 import { Button } from "~/components/button";
+import { authenticator, EMAIL_PASSWORD_STRATEGY } from "~/auth/authenticator.server";
 
 export const action: ActionFunction = async ({ request }) => {
-
+    return await authenticator.authenticate(EMAIL_PASSWORD_STRATEGY, request, {
+        successRedirect: "/app",
+        failureRedirect: "/login",
+      });
 }
 
 
