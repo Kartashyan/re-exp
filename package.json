@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "re-exp",
   "private": true,
   "sideEffects": false,
   "type": "module",
@@ -11,16 +11,20 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
     "@remix-run/express": "^2.10.3",
     "@remix-run/node": "^2.10.3",
     "@remix-run/react": "^2.10.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
     "express": "^4.19.2",
     "isbot": "^4.1.0",
     "morgan": "^1.10.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.10.3",
