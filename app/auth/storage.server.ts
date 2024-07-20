@@ -1,4 +1,5 @@
 import { createCookieSessionStorage } from "@remix-run/node";
+import { envServerSchema } from "~/env-schema.server";
 
 export const sessionStorage = createCookieSessionStorage({
   cookie: {
@@ -6,7 +7,7 @@ export const sessionStorage = createCookieSessionStorage({
     sameSite: "lax",
     path: "/",
     httpOnly: true,
-    secrets: ["super-secret"],
+    secrets: [envServerSchema.SESSION_SECRET],
     secure: process.env.NODE_ENV === "production",
   },
 });
