@@ -1,6 +1,6 @@
 import { ActionFunction } from "@remix-run/node";
 import { Form } from "@remix-run/react";
-import { authenticator } from "~/auth/authenticator.server";
+import { authenticator } from "~/infrastructure/auth/authenticator.server";
 
 export const action: ActionFunction = async ({ request }) => {
     await authenticator.logout(request, {

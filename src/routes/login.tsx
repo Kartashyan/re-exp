@@ -1,8 +1,8 @@
 import { Form, Link, useActionData } from "@remix-run/react";
 import { ActionFunction, LoaderFunction } from "@remix-run/node";
-import { authenticator, EMAIL_PASSWORD_STRATEGY } from "~/auth/authenticator.server";
-import { Input } from "~/components/input";
-import { Button } from "~/components/button";
+import { authenticator, EMAIL_PASSWORD_STRATEGY } from "~/infrastructure/auth/authenticator.server";
+import { Input } from "~/infrastructure/components/input";
+import { Button } from "~/infrastructure/components/button";
 
 
 export const action: ActionFunction = async ({ request }) => {

@@ -1,6 +1,6 @@
 import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { authenticator } from "~/auth/authenticator.server";
+import { authenticator } from "~/infrastructure/auth/authenticator.server";
 import { Logout } from "./logout";
 
 export const loader: LoaderFunction = async ({ request }) => {
