@@ -1,4 +1,9 @@
 node_modules
+src/infrastructure/storage/drizzle
+src/infrastructure/storage/sqlite.db
+src/infrastructure/storage/sqlite.db-shm
+src/infrastructure/storage/sqlite.db-wal
+
 
 /.cache
 /build
