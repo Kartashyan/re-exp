@@ -2,7 +2,7 @@ import { ActionFunction } from "@remix-run/node";
 import { Form, Link, redirect, useActionData } from "@remix-run/react";
 import { Button } from "~/infrastructure/components/button";
 import { Input } from "~/infrastructure/components/input";
-import { userService } from "~/contexts/user/user.service";
+import { userService } from "~/domain-contexts/user/user.service";
 
 export const action: ActionFunction = async ({ request }) => {
     const body = new URLSearchParams(await request.text());

@@ -2,12 +2,14 @@ import { json, LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { authenticator } from "~/infrastructure/auth/authenticator.server";
 import { Logout } from "./logout";
+import { userService } from "~/domain-contexts/user/user.service";
 
 export const loader: LoaderFunction = async ({ request }) => {
     const user = await authenticator.isAuthenticated(request, {
         failureRedirect: "/login",
     });
-
+    const dbUser = await userService.findUserByEmail(user.email);
+    console.log("-----dbUser--", dbUser)
     return json(user);
 }
 
