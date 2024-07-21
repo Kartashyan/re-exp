@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { UserRepository } from "../domain/user-repo.port";
 import { SignupUseCase } from "./signup.usecase";
-import { fail, ok } from "~/contexts/core/result";
+import { fail, ok } from "~/domain-contexts/core/result";
 
 describe("SignupUseCase", () => {
   let userRepo: UserRepository;

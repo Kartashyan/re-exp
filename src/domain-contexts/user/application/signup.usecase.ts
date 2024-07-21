@@ -1,10 +1,10 @@
 
-import { fail, ok, Result } from "~/contexts/core/result";
+import { fail, ok, Result } from "~/domain-contexts/core/result";
 import { Email } from "../domain/email.value-object";
 import { UserRepository } from "../domain/user-repo.port";
-import { DomainError } from "~/contexts/core/domain-error";
+import { DomainError } from "~/domain-contexts/core/domain-error";
 import { User } from "../domain/user.aggregate-root";
-import { Password } from "~/contexts/core/password.value-object";
+import { Password } from "~/domain-contexts/core/password.value-object";
 
 
 type CommandDto = {

@@ -1,7 +1,7 @@
 import { Authenticator } from "remix-auth";
 import { FormStrategy } from "remix-auth-form";
-import { UserModel } from "~/contexts/user/domain/user.model";
-import { userService } from "~/contexts/user/user.service";
+import { UserModel } from "~/domain-contexts/user/domain/user.model";
+import { userService } from "~/domain-contexts/user/user.service";
 import { sessionStorage } from "./storage.server";
 
 export const EMAIL_PASSWORD_STRATEGY = "email-password-strategy";

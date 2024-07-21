@@ -1,9 +1,9 @@
-import { AggregateRoot } from "~/contexts/core/aggregate-root";
+import { AggregateRoot } from "~/domain-contexts/core/aggregate-root";
 import { Email } from "./email.value-object";
 import { UserCreatedEvent } from "./user-created.event";
-import { UID } from "~/contexts/core/id";
-import { Password } from "~/contexts/core/password.value-object";
-import { HashedPassword } from "~/contexts/core/hashed-password.value-object";
+import { UID } from "~/domain-contexts/core/id";
+import { Password } from "~/domain-contexts/core/password.value-object";
+import { HashedPassword } from "~/domain-contexts/core/hashed-password.value-object";
 
 interface UserProps {
     email: Email;

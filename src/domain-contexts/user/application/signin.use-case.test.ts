@@ -1,10 +1,10 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { SigninUseCase } from "./signin.use-case";
 import { UserRepository } from "../domain/user-repo.port";
-import { Password } from "~/contexts/core/password.value-object";
+import { Password } from "~/domain-contexts/core/password.value-object";
 import { User } from "../domain/user.aggregate-root";
 import { Email } from "../domain/email.value-object";
-import { fail, ok } from "~/contexts/core/result";
+import { fail, ok } from "~/domain-contexts/core/result";
 
 describe("SigninUseCase", () => {
     let userRepo: UserRepository;
