@@ -1,14 +1,12 @@
 import { UID } from "./id";
 
-export class Entity<T> {
-    protected readonly _id: UID
-    constructor(private readonly _props: T, id?: UID) {
+export class Entity<T extends { id: UID }> {
+    constructor(private readonly _props: T) {
         this._props = _props;
-        this._id = id ? id : new UID();
     }
 
     get id(): UID {
-        return this._id;
+        return this._props.id;
     }
 
     get props(): T {
