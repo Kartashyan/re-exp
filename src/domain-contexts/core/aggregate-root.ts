@@ -3,10 +3,10 @@ import { Entity } from "./entity";
 import { UID } from "./id";
 import { LocalEventManager } from "./local-event-manager";
 
-export class AggregateRoot<T> extends Entity<T> {
+export class AggregateRoot<T extends { id: UID }> extends Entity<T> {
     protected _domainEvents: DomainEvent<this>[];
-    constructor(_props: T, id?: UID) {
-        super(_props, id);
+    constructor(_props: T) {
+        super(_props);
         this._domainEvents = [];
     }
 
