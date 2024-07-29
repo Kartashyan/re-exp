@@ -5,6 +5,7 @@ import { UserRepository } from "../domain/user-repo.port";
 import { DomainError } from "~/domain-contexts/core/domain-error";
 import { User } from "../domain/user.aggregate-root";
 import { Password } from "~/domain-contexts/core/password.value-object";
+import { UID } from "~/domain-contexts/core/id";
 
 
 type CommandDto = {
@@ -34,6 +35,7 @@ export class SignupUseCase {
         const hashedPassword = password.hash();
         
         const user = User.create({
+            id: new UID(),
             email,
             hashedPassword,
         });
