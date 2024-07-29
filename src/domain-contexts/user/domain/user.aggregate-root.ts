@@ -6,17 +6,17 @@ import { Password } from "~/domain-contexts/core/password.value-object";
 import { HashedPassword } from "~/domain-contexts/core/hashed-password.value-object";
 
 interface UserProps {
+    id: UID;
     email: Email;
     hashedPassword: HashedPassword;
 }
 export class User extends AggregateRoot<UserProps> {
-    private constructor(props: UserProps, id?: UID) {
-        super(props, id);
+    private constructor(props: UserProps) {
+        super(props);
     }
-    public static create(props: UserProps, id?: UID): User {
-        const isNew = id ? false : true;
-        const user = new User(props, id);
-        if (isNew) {
+    public static create(props: UserProps): User {
+        const user = new User(props);
+        if (props.id.isNew) {
             user.addDomainEvent(new UserCreatedEvent(user));
         }
         return user;
